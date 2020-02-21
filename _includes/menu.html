@@ -1,7 +1,5 @@
-{% assign default_paths = site.pages | map: "path"  %} 
-{% assign current_page = page.url  %}
 
-{% if default_paths  %}
+
 <a href="#offcanvas-slide" class="uk-button" uk-toggle>
   <svg viewBox="0 0 18 15" width="18px" height="15px">
     <path
@@ -15,27 +13,17 @@
 <div id="offcanvas-slide" uk-offcanvas>
   <div class="uk-offcanvas-bar">
     <ul class="uk-nav uk-nav-default">
-      <li class="uk-active"><a href="#">Active</a></li>
-      <li><a href="#">Item</a></li>
-      <li class="uk-nav-header">Header</li>
-      {% for path in default_paths  %} 
-      
-      {% assign my_page = site.pages | where:
-      "path", path | first  %} 
-      
-      {% if my_page.title  %}
-      <li {% if current_page == page.url %} class="uk-active"{% endif %}
-      >
-        <a href="{{ my_page.url | absolute_url }}">
-          {{ my_page.title | escape }}
-        </a>
-      </li>
-      {% endif  %} 
-      
-      {% endfor  %}
+      <li class="uk-nav-header">Menu</li>
+      {% for link in site.data.navigation.main %} 
+          {% assign url = link.url | relative_url %} 
+          <li class="{% if page.url == url %}uk-active{% endif %}">
+            <a href="{{ url }}">{{ link.name }}</a>
+          </li>
+      {% endfor %}
+
       <li class="uk-nav-divider"></li>
-      <li><a href="#">Item</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </div>
 </div>
-{% endif  %}
+
