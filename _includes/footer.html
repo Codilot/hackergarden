@@ -1,0 +1,22 @@
+<footer>
+  <h4>{{ site.title | escape }}</h2>
+
+  <div>
+    {% include social.html  %}
+  </div>
+
+  <!-- Copyright -->
+  <section id="copyright">
+    <p>
+      &copy; {{ site.title }}
+      <a href="https://www.evelinekooijman.com">Eveline Kooijman</a> {% if
+      site.email  %} |
+      <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> {%
+      endif  %}
+    </p>
+  </section>
+</footer>
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit.min.js" integrity="sha384-Plachh66YL4MaoiKhLfBk9LOvr/2cpmD8lJO9eTZvBzJbSgm4+zeiJwZ9Uj4H/oD" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.2/dist/js/uikit-icons.min.js" integrity="sha384-2i4q6VJ/cQNuL1V4PouWWvtq13N0Guc+TKpmNK7/dJi4tKXTgy0cduL7/LzoL1Du" crossorigin="anonymous"></script>
