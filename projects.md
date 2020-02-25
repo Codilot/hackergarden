@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-permalink: /meetups
+permalink: /projects
 ---
 
 # projects
