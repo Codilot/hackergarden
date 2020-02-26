@@ -1,0 +1,40 @@
+.hackergarden__header {
+  &__container {
+    height: 100%;
+  }
+  &__image {
+    height: 100%;
+    transform: translate3d(0, 0, 0) scale(1.25);
+    background: url("images/hero.jpg") no-repeat center center;
+    background-size: cover;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #000000;
+      opacity: 0.2;
+    }
+  }
+  &__content {
+    padding: 8em;
+  }
+
+  &__intro {
+    margin: 4em auto;
+  }
+}
+.loaded .hackergarden__header__image {
+  transform: scale(1);
+  transition: 20s transform;
+}
+
+.hackergarden {
+  &__headline {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: 3.5em;
+  }
+}

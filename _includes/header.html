@@ -1,4 +1,18 @@
 <header>
   {% include menu.html %}
+  <div class="uk-grid-collapse uk-child-width-expand@s hackergarden__header__container" uk-grid>
+    <div class="uk-width-1-2 uk-overflow-hidden">
+      <div class="hackergarden__header__image"></div>
+    </div>
+     <div class="uk-width-1-2 hackergarden__header__content uk-flex uk-flex-middle">
+     <div class="hackergarden__header__content__inner uk-animation-fade">
+       <h1 class="hackergarden__headline">Hackergarden</h1>
+       <h2 class="hackergarden_subline">Straubing, BY</h2>
+       <p class="hackergarden__header__intro">Hackergarden is all about learning to code together, 
+        share experiences about latest technologies, 
+        connect and hack on new ideas.</p>
+      </div>
+     </div>
+  </div>
   <a rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 </header>

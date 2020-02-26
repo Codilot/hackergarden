@@ -26,7 +26,17 @@ figure {
   width: device-width;
 }
 
+html,
+body,
+header {
+  height: 100%;
+}
+
 // MSIE: Prevents scrollbar from overlapping content.
 body {
   -ms-overflow-style: scrollbar;
+}
+
+img {
+  max-width: 100%;
 }

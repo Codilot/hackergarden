@@ -1,11 +1,14 @@
 @charset "utf-8";
 
 // Theme
+@import "theme/theme_vars";
 
 // Base
 @import "base/basics";
 @import "base/typography";
 
-// Component
+// Components
+@import "components/menu";
+@import "components/header";
 
 // Layout

@@ -1,9 +1,11 @@
 main:
-  - name: "Home"
-    url: /
-  - name: "About"
-    url: /about
-  - name: "Meetups"
-    url: /meetups
+  - name: "Learn"
+    url: /learn
+  - name: "Code"
+    url: /code
   - name: "Projects"
     url: /projects
+  - name: "Meetups"
+    url: /meetups
+  - name: "About"
+    url: /about
