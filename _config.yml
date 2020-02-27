@@ -21,7 +21,7 @@
 title: hackergarden
 
 description: >- # this means to ignore newlines until "baseurl:"
-  Hackergarden is all about learning to code together, share experiences about latest technologies, connect and hack on new ideas.
+  Hackergarden combines tech with growing crops. It is a place where we explore web and IoT technologies to support our cultivating process in a sustainable way. In our 400 qm garden we want to preserve as many open-pollinated organic vegetable varieties as possible by growing them.
 baseurl: "/hackergarden" # the subpath of your site, e.g. /blog
 url: "https://codilot.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
