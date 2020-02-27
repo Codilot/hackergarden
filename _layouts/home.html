@@ -2,18 +2,15 @@
 layout: default
 ---
 
-{% include hero.html %}
+{% include hero.html %} {{ content }}
 
-<div uk-grid>
-  {{ content }}
-</div>
-<div uk-grid>
+<div class="latest-posts">
   {% if site.posts.size > 0 %}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-  <ul class="post-list">
+  <h2>{{ page.list_title | default: "Posts" }}</h2>
+  <ul>
     {% for post in site.posts %}
     <li>
-      <span class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</span>
+      <span>{{ page.date | date: "%B %-d, %Y" }}</span>
       <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">
           {{ post.title | escape }}
