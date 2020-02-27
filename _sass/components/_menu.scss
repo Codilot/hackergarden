@@ -37,6 +37,13 @@
   color: $global-highlight-color;
 }
 
+.uk-offcanvas-bar {
+  padding: 30px;
+  .uk-offcanvas-close {
+    padding: 12px;
+  }
+}
+
 .hackergarden {
   &__logo {
     height: 65px;
