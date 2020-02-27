@@ -1,0 +1,55 @@
+.hackergarden__button {
+  background-color: white;
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  height: 42px;
+  min-width: 180px;
+  position: relative;
+  border: none;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 30px;
+    width: 180px;
+    bottom: -15px;
+    right: -15px;
+    border-radius: 0 0 25px 0;
+    background-color: $button-highlight-color-secondary;
+    transform-origin: -30px 100%;
+    transition: all 0.3s;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      background-color: $button-highlight-color-primary;
+    }
+  }
+  &:hover {
+    border: none;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    &:before {
+      width: 8px;
+      height: 8px;
+      border-radius: 25px;
+      bottom: 18px;
+      right: 18px;
+      z-index: 1;
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+      animation: pulse 2s infinite;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($button-highlight-color-primary, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba($button-highlight-color-primary, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba($button-highlight-color-primary, 0);
+  }
+}

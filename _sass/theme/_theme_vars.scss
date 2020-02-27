@@ -1,6 +1,7 @@
 $global-font: "Overpass", Arial, Helvetica, sans-serif;
 $global-text-color: #343434;
 $global-highlight-color: #21eb00;
+$global-dark-color: #343434;
 
 $font-weight-bold: 800;
 $font-weight-regular: 400;
@@ -9,3 +10,6 @@ $font-weight-thin: 200;
 $breakpoint-s: 640px;
 $breakpoint-sm: 768px;
 $breakpoint-m: 960px;
+
+$button-highlight-color-primary: #343434;
+$button-highlight-color-secondary: #21eb00;
