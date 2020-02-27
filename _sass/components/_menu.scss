@@ -36,3 +36,24 @@
 .uk-navbar-nav > li.uk-active > a {
   color: $global-highlight-color;
 }
+
+.hackergarden__logo {
+  height: 65px;
+  width: 65px;
+
+  path {
+    stroke: $global-text-color;
+    stroke-dasharray: 126;
+    stroke-dashoffset: 126;
+    animation: dash 2s linear forwards;
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.uk-logo {
+  color: $global-text-color;
+}

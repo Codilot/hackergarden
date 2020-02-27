@@ -39,22 +39,3 @@
     font-size: 3.5em;
   }
 }
-.hackergarden__logo {
-  height: 65px;
-  width: 65px;
-  position: absolute;
-  left: 0;
-  top: 5px;
-  z-index: 2000;
-  path {
-    stroke: $global-text-color;
-    stroke-dasharray: 126;
-    stroke-dashoffset: 126;
-    animation: dash 2s linear forwards;
-  }
-}
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
