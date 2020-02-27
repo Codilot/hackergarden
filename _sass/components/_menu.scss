@@ -37,15 +37,20 @@
   color: $global-highlight-color;
 }
 
-.hackergarden__logo {
-  height: 65px;
-  width: 65px;
+.hackergarden {
+  &__logo {
+    height: 65px;
+    width: 65px;
 
-  path {
-    stroke: $global-text-color;
-    stroke-dasharray: 126;
-    stroke-dashoffset: 126;
-    animation: dash 2s linear forwards;
+    path {
+      stroke: $global-text-color;
+      stroke-dasharray: 126;
+      stroke-dashoffset: 126;
+      animation: dash 2s linear forwards;
+    }
+  }
+  &__menu__button {
+    fill: $global-text-color;
   }
 }
 @keyframes dash {
