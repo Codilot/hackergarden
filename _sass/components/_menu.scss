@@ -14,7 +14,6 @@
 .uk-navbar-nav {
   li > a {
     text-transform: none;
-
     color: $global-text-color;
     font-family: $global-font;
   }
@@ -46,26 +45,44 @@
 
 .hackergarden {
   &__logo {
-    height: 65px;
-    width: 65px;
-
+    height: 60px;
+    width: 60px;
     path {
-      stroke: $global-text-color;
+      stroke: white;
       stroke-dasharray: 126;
       stroke-dashoffset: 126;
       animation: dash 2s linear forwards;
+      @media screen and (min-width: $breakpoint-sm) {
+        stroke: $global-text-color;
+      }
+    }
+    .uk-navbar-sticky & {
+      path {
+        stroke: $global-text-color;
+      }
+    }
+  }
+  &__brand {
+    color: white;
+    .uk-navbar-sticky & {
+      color: $global-text-color;
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+      color: $global-text-color;
     }
   }
   &__menu__button {
-    fill: $global-text-color;
+    fill: white;
+    .uk-navbar-sticky & {
+      fill: $global-text-color;
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+      fill: $global-text-color;
+    }
   }
 }
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
-}
-
-.uk-logo {
-  color: $global-text-color;
 }

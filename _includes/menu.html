@@ -8,14 +8,17 @@
                 <div uk-navbar>
 
                     <div class="uk-navbar-left">
-                        <svg class="hackergarden__logo" width="65px" height="65px" viewBox="0 0 36 66" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" stroke="#000" stroke-width="2" d="M17 35.5H35M23 41.5H33M21 47.5H30M16 17.5L10 5L15 8L18 2L21 8L26 5L20 17.5M1 33.8C0.999999 24.5216 8.61116 17 18 17C27.3888 17 35 24.5216 35 33.8C35 43.0784 18 65 18 65C18 65 1 43.0784 1 33.8Z"/>
-                          </svg>
-                        <a rel="author" href="{{"/" | relative_url}}" class="uk-navbar-item uk-logo">{{ site.title | escape }}</a>
+                        <a href="{{"/" | relative_url}}" class="uk-navbar-item">
+                            <svg class="hackergarden__logo" width="60px" height="60px" viewBox="0 0 36 66" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" stroke="#000" stroke-width="2" d="M17 35.5H35M23 41.5H33M21 47.5H30M16 17.5L10 5L15 8L18 2L21 8L26 5L20 17.5M1 33.8C0.999999 24.5216 8.61116 17 18 17C27.3888 17 35 24.5216 35 33.8C35 43.0784 18 65 18 65C18 65 1 43.0784 1 33.8Z"/>
+                            </svg>
+                            <span rel="author" class="uk-navbar-item uk-logo hackergarden__brand">{{ site.title | escape }}</span>
+                        </a>
                     </div>
+                  
 
                     <!-- Navigation Tablet / Desktop -->
-                    <div class="uk-navbar-right uk-visible@s">
+                    <div class="uk-navbar-right uk-visible@m">
                     <ul class="uk-navbar-nav uk-nav">
                       {% for link in site.data.navigation.main %} 
                           {% assign url = link.url | relative_url %} 
@@ -26,7 +29,7 @@
                     </div>
 
                     <!-- Navigation Mobile -->
-                    <div class="uk-navbar-right uk-hidden@s">
+                    <div class="uk-navbar-right uk-hidden@m">
                         <a href="#offcanvas-slide" class="uk-button hackergarden__menu__button" uk-icon="icon: menu" uk-toggle></a>
 
                         <div id="offcanvas-slide" uk-offcanvas="overlay: true; flip: true">
