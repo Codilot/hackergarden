@@ -1,0 +1,80 @@
+.hackergarden__hero {
+  &__container {
+    height: 100%;
+  }
+  &__image {
+    height: 100%;
+    transform: translate3d(0, 0, 0) scale(1.25);
+    background: url("images/hero.jpg") no-repeat center center;
+    background-size: cover;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #000000;
+      opacity: 0.2;
+    }
+    .loaded & {
+      transform: scale(1);
+      transition: 20s transform;
+    }
+  }
+  &__content {
+    @media screen and (max-width: $breakpoint-sm) {
+      color: #fff;
+      background: url("images/hero.jpg") no-repeat center center;
+      background-size: cover;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        opacity: 0.5;
+        display: block;
+      }
+    }
+  }
+  &__content__inner {
+    margin: 0 auto;
+    padding: 2em;
+    @media screen and (min-width: $breakpoint-s) {
+      max-width: 460px;
+    }
+  }
+  &__intro {
+    margin: 2em auto;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin: 4em auto;
+    }
+  }
+}
+
+.hero {
+  &__headline {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: 2em;
+    color: white;
+    @media screen and (min-width: $breakpoint-sm) {
+      font-size: 3.5em;
+      color: $global-text-color;
+    }
+  }
+  &__subline {
+    color: white;
+    font-size: 1.1em;
+  }
+  @media screen and (min-width: $breakpoint-sm) {
+    font-size: 2em;
+    color: $global-text-color;
+  }
+  &__intro {
+    font-weight: $font-weight-thin;
+  }
+}
