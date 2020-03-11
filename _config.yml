@@ -29,6 +29,10 @@ instagram_username: hackergarden
 linkedin_username: madebyeve
 email: info@evelinekooijman.com
 
+sass:
+  sass_dir: assets/_sass
+  style: compressed
+
 collections:
   projects:
     output: true
@@ -87,3 +91,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+
+include: [_pages]
