@@ -1,8 +1,8 @@
 main:
-  - name: "Learn"
-    url: /learn
   - name: "Code"
     url: /code
+  - name: "Veggies"
+    url: /veggies
   - name: "Projects"
     url: /projects
   - name: "Meetups"

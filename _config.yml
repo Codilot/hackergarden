@@ -34,8 +34,6 @@ sass:
   style: compressed
 
 collections:
-  projects:
-    output: true
   meetups:
     output: true
   authors:
