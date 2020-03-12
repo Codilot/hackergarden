@@ -22,7 +22,7 @@
                     <ul class="uk-navbar-nav uk-nav">
                       {% for link in site.data.navigation.main %} 
                           {% assign url = link.url | relative_url %} 
-                          <li class="{% if page.url == link.url or link.name == 'Meetups' %}uk-active{% endif %}">
+                          <li class="{% if page.url == link.url %}uk-active{% endif %}">
                             <a href="{{ url }}">{{ link.name }}</a>
                           </li>
                       {% endfor %}

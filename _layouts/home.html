@@ -2,42 +2,25 @@
 layout: default
 ---
 
-{% include hero.html %} {{ content }} {% if site.posts.size > 0 %} {% assign
-newest_post = site.posts.first %}
-<section class="projects">
-  <h2>Projects</h2>
-  <div>
-    <span>{{ newest_post.date | date: "%B %-d, %Y" }}</span>
-    <h3>
-      <a class="post-link" href="{{ post.url | relative_url }}">
-        {{ newest_post.title | escape }}
-      </a>
-    </h3>
-    {% if site.show_excerpts %} {{ post.excerpt }} {% endif %}
-  </div>
-  <div>
-    <a href="{{ site.baseurl| append: "/projects" }}"
-    >All projects</a>
-  </div>
-</section>
+{% include hero.html %} 
+{{ content }} 
+{% if site.posts.size > 0 %} 
+{% assign newest_post = site.posts.first %}
+    <section class="projects">
+      <h2>Projects</h2>
+      <div>
+       
+        <h3>
+          <a class="post-link" href="{{ newest_post.url | relative_url }}">
+            {{ newest_post.title | escape }}
+          </a>
+        </h3>
+        {% if newest_post.excerpt %} {{ newest_post.excerpt }} {% endif %}
+      </div>
+      <div>
+        <a href="{{ "/projects" | relative_url }}"
+        >All projects</a>
+      </div>
+    </section>
 {% endif %}
 
-<div class="all-posts">
-  {% if site.posts.size > 0 %}
-  <h2>All Posts</h2>
-  <ul>
-    {% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date: "%B %-d, %Y" }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {% if site.show_excerpts %} {{ post.excerpt }} {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-
-  {% endif %}
-</div>
