@@ -9,7 +9,7 @@ layout: page
     <li>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
       <span>{{ post.date | date: "%B %-d, %Y" }}</span>
-      <p>{% if site.show_excerpts %} {{ post.excerpt }} {% endif %}</p>
+      <p>{% if post.excerpt %} {{ post.excerpt }} {% endif %}</p>
     </li>
     {% endfor %}
 </ul>
