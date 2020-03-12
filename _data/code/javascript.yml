@@ -1,0 +1,11 @@
+courses:
+  - title: The Odin Project
+    url: https://www.theodinproject.com/
+  - title: Codecademy
+    url: https://www.codecademy.com/
+  - title: W3Schools
+    url: https://www.w3schools.com/
+  - title: Free Code Camp
+    url: https://www.freecodecamp.org/
+  - title: Codewars
+    url: https://www.codewars.com/

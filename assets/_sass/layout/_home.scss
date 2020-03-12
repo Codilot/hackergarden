@@ -1,3 +1,50 @@
-.projects {
-  min-height: 500px;
+.hackergarden__home {
+  margin: auto;
+  @media screen and (min-width: $breakpoint-sm) {
+    max-width: 80%;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    & > div {
+      padding: 0;
+      margin: 0px 20px 20px !important;
+    }
+  }
+
+  &__projects {
+    min-height: 300px;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-top: -250px;
+    }
+  }
+}
+
+.hackergarden__card {
+  &__overline {
+    span {
+      font-weight: $font-weight-regular;
+      font-size: 0.7em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 2px solid $global-highlight-color;
+      display: inline-block;
+      line-height: 1.2em;
+      margin-bottom: 16px;
+    }
+  }
+  &__title {
+    font-size: 2.2em;
+    line-height: 1.2em;
+    font-weight: $font-weight-regular;
+    margin-bottom: 32px;
+  }
+  &__actions {
+    margin: 32px 0;
+  }
+}
+
+.hackergarden__list {
+  &__title {
+    font-weight: $font-weight-bold;
+    margin-bottom: 16px;
+  }
 }

@@ -1,0 +1,31 @@
+---
+layout: page
+title: Code
+permalink: /code
+---
+
+<h1>
+  Code
+</h1>
+<div class="uk-grid-match" uk-grid>
+  <div class="uk-width-1-2@m">
+    <h5 class="hackergarden__list__title">Frontend</h5>
+    <ul class="uk-list">
+      {% for link in site.data.code.frontend %}
+      <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="uk-width-1-2@m">
+    <h5 class="hackergarden__list__title">JavaScript</h5>
+    <ul class="uk-list">
+      {% for link in site.data.code.javascript.courses %}
+      <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

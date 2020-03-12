@@ -1,0 +1,16 @@
+---
+layout: page
+title: Veggies
+permalink: /veggies
+---
+
+<h1>Veggies</h1>
+
+<h5 class="hackergarden__list__title">Resources</h5>
+<ul class="uk-list">
+  {% for link in site.data.veggies.seeds.resources %}
+  <li>
+    <a href="{{ link.url }}">{{ link.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
