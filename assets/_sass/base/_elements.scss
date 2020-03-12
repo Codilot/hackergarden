@@ -1,4 +1,6 @@
-.hackergarden__button {
+.hackergarden__button,
+.hackergarden__button:active,
+.hackergarden__button:focus {
   background-color: white;
   box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.1);
   border-radius: 50px;
@@ -9,7 +11,7 @@
   &:before {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: -1 !important;
     height: 30px;
     width: 180px;
     bottom: -15px;
@@ -18,26 +20,42 @@
     background-color: $button-highlight-color-secondary;
     transform-origin: -30px 100%;
     transition: all 0.3s;
-
     @media screen and (min-width: $breakpoint-sm) {
       background-color: $button-highlight-color-primary;
     }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 25px;
+    bottom: 18px;
+    right: 18px;
+    z-index: 2;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    opacity: 0;
+    display: none;
   }
   &:hover {
     border: none;
     background-color: white;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
     &:before {
-      width: 8px;
-      height: 8px;
-      border-radius: 25px;
       bottom: 18px;
       right: 18px;
-      z-index: 1;
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+      height: 0px;
+      width: 0px;
+      z-index: -1;
+    }
+    &:after {
+      background-color: $button-highlight-color-secondary;
+      opacity: 1;
+      display: block;
       animation: secondary-pulse 2s infinite;
       @media screen and (min-width: $breakpoint-sm) {
         animation: primary-pulse 2s infinite;
+        background-color: $button-highlight-color-primary;
       }
     }
   }
