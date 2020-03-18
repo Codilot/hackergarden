@@ -13,7 +13,7 @@
   &__projects {
     min-height: 300px;
     @media screen and (min-width: $breakpoint-sm) {
-      margin-top: -250px;
+      margin-top: -150px;
     }
   }
 }
@@ -25,7 +25,7 @@
       font-size: 0.7em;
       text-transform: uppercase;
       text-decoration: none;
-      border-bottom: 2px solid $global-color-primary;
+      border-bottom: 4px solid $global-color-primary;
       display: inline-block;
       line-height: 1.2em;
       margin-bottom: 16px;

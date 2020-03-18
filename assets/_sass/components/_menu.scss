@@ -18,6 +18,13 @@
     font-family: $global-font;
   }
 }
+.uk-navbar-nav > li.uk-active > a {
+  color: $global-color-primary;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background-color: $global-color-primary;
+}
 
 .uk-navbar-sticky {
   .uk-navbar {
@@ -25,19 +32,21 @@
   }
   .uk-navbar-nav {
     li > a {
-      color: $global-text-color;
+      color: white;
       font-family: $global-font;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
   }
 }
-.uk-navbar-nav > li.uk-active > a {
-  color: $global-color-primary;
-}
 
 .uk-offcanvas-bar {
   padding: 30px;
+  width: 100%;
+  background-color: $global-color-primary;
+  .uk-nav-default > li > a {
+    color: rgba(255, 255, 255, 1);
+  }
   .uk-offcanvas-close {
     padding: 12px;
   }
@@ -58,29 +67,33 @@
     }
     .uk-navbar-sticky & {
       path {
-        stroke: $global-text-color;
+        stroke: white;
       }
     }
   }
   &__brand {
     color: $global-text-color;
     .uk-navbar-sticky & {
-      color: $global-text-color;
-    }
-    @media screen and (min-width: $breakpoint-sm) {
-      color: $global-text-color;
+      color: white;
     }
   }
   &__menu__button {
     fill: $global-text-color;
     .uk-navbar-sticky & {
-      fill: $global-text-color;
-    }
-    @media screen and (min-width: $breakpoint-sm) {
-      fill: $global-text-color;
+      fill: white;
     }
   }
 }
+@media screen and (max-width: $breakpoint-sm) {
+  .contrast-color {
+    color: white;
+    fill: white;
+    path {
+      stroke: white;
+    }
+  }
+}
+
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
