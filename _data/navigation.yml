@@ -4,7 +4,7 @@ main:
   - name: "Veggies"
     url: /veggies
   - name: "Projects"
-    url: /projects
+    url: /projects/
   - name: "Meetups"
     url: /meetups
   - name: "About"
