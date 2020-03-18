@@ -25,13 +25,13 @@
       font-size: 0.7em;
       text-transform: uppercase;
       text-decoration: none;
-      border-bottom: 2px solid $global-highlight-color;
+      border-bottom: 2px solid $global-color-primary;
       display: inline-block;
       line-height: 1.2em;
       margin-bottom: 16px;
       &:hover,
       &:active {
-        color: $global-highlight-color;
+        color: $global-color-primary;
       }
     }
   }

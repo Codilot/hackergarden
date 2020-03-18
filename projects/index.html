@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Projects
-
 ---
 
 <div class="uk-section uk-padding-remove-top">
@@ -18,9 +17,10 @@ title: Projects
       <p class="uk-article-meta">
         <span uk-icon="calendar"></span>
         <span class="date">{{post.date | date: "%b %d, %Y "}} </span>
-        <span uk-icon="tag"></span>
+         •
+        {% include reading-time.html text-to-count=post.content%}
       </p>
-
+  
       <div class="content">
         {{ post.excerpt | strip_html }}
         <br /><a href="{{ post.url | relative_url }}" class="post-read-more"

@@ -23,8 +23,10 @@ layout: default
               {{ newest_post.title | escape }}
             </a>
           </h2>
-
-          {% if newest_post.excerpt %} {{ newest_post.excerpt }} {% endif %}
+          {% include reading-time.html text-to-count=newest_post.content %}
+          {% if newest_post.excerpt %} 
+            {{ newest_post.excerpt }} 
+          {% endif %}
           <a class="hackergarden__button__container hackergarden__card__actions" href="{{ newest_post.url | relative_url }}">
             <button class="uk-button uk-button-default hackergarden__button">
                 More details

@@ -33,7 +33,7 @@
   }
 }
 .uk-navbar-nav > li.uk-active > a {
-  color: $global-highlight-color;
+  color: $global-color-primary;
 }
 
 .uk-offcanvas-bar {
@@ -48,7 +48,7 @@
     height: 60px;
     width: 60px;
     path {
-      stroke: white;
+      stroke: $global-text-color;
       stroke-dasharray: 126;
       stroke-dashoffset: 126;
       animation: dash 2s linear forwards;
@@ -63,7 +63,7 @@
     }
   }
   &__brand {
-    color: white;
+    color: $global-text-color;
     .uk-navbar-sticky & {
       color: $global-text-color;
     }
@@ -72,7 +72,7 @@
     }
   }
   &__menu__button {
-    fill: white;
+    fill: $global-text-color;
     .uk-navbar-sticky & {
       fill: $global-text-color;
     }
