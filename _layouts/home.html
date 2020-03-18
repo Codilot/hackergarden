@@ -5,14 +5,16 @@ layout: default
 {% include hero.html %} 
 {{ content }} 
 
+
 <div class="hackergarden__home uk-grid-match" uk-grid>
 
   {% if site.posts.size > 0 %} 
+    {% assign posts = site.posts %}
     {% assign newest_post = site.posts.first %}
     <div class="uk-width-1-1">
       <div class="hackergarden__home__projects uk-card uk-card-default uk-card-large uk-card-body ">
         <h4 class="hackergarden__card__overline">
-          <span>Projects</span>
+          <a href="{{ "/projects" | relative_url }}">Projects</a>
         </h4>
  
        
@@ -23,12 +25,11 @@ layout: default
           </h2>
 
           {% if newest_post.excerpt %} {{ newest_post.excerpt }} {% endif %}
-  
-     
-          <a href="{{ "/projects" | relative_url }}">
-            All projects
-          </a>
-        
+          <a class="hackergarden__button__container hackergarden__card__actions" href="{{ newest_post.url | relative_url }}">
+            <button class="uk-button uk-button-default hackergarden__button">
+                More details
+            </button>
+           </a>
       </div>
     </div>
   {% endif %}
@@ -36,7 +37,7 @@ layout: default
   <div class="uk-width-1-2@m">
     <div class="uk-card uk-card-default uk-card-large uk-card-body">       
         <h4 class="hackergarden__card__overline">
-          <span>Code</span>
+          <a href="{{ "/code" | relative_url }}">Code</a>
         </h4>
         <h2 class="uk-card-title hackergarden__card__title">
           Resources to learn and code along with us
@@ -63,7 +64,7 @@ layout: default
               </ul>
             </div>
         </div>
-        <a class="hackergarden__button__container hackergarden__card__actions" href="{{ "/veggies" | relative_url }}">
+        <a class="hackergarden__button__container hackergarden__card__actions" href="{{ "/code" | relative_url }}">
           <button class="uk-button uk-button-default hackergarden__button">
               Show more
           </button>
@@ -74,7 +75,7 @@ layout: default
   <div class="uk-width-1-2@m">
     <div class="uk-card uk-card-default uk-card-large uk-card-body">
       <h4 class="hackergarden__card__overline">
-        <span>Veggies</span>
+        <a href="{{ "/veggies" | relative_url }}">Veggies</a>
       </h4>
       <h2 class="uk-card-title hackergarden__card__title">
         Grow, multiply and share vegetable seeds 

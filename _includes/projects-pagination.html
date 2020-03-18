@@ -1,0 +1,17 @@
+<div class="hackergarden__pagination">
+    <hr class="hackergarden__pagination__divider">
+    <ul class="uk-pagination uk-flex-center" uk-margin>
+
+      {% if paginator.previous_page %}
+      <li><a href="{{ paginator.previous_page_path | relative_url }}"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</a></li>
+      {% endif %}
+
+      <span class="uk-flex uk-flex-center">
+        <li>{{paginator.page}} of {{paginator.total_pages}}</li>
+      </span>
+
+      {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | relative_url  }}">Next <span class="uk-margin-small-left" uk-pagination-next></span></a></li>
+      {% endif %}
+    </ul>
+</div>

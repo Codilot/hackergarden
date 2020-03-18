@@ -20,7 +20,7 @@
 
 .hackergarden__card {
   &__overline {
-    span {
+    a {
       font-weight: $font-weight-regular;
       font-size: 0.7em;
       text-transform: uppercase;
@@ -29,6 +29,10 @@
       display: inline-block;
       line-height: 1.2em;
       margin-bottom: 16px;
+      &:hover,
+      &:active {
+        color: $global-highlight-color;
+      }
     }
   }
   &__title {
