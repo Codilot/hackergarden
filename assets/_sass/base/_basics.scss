@@ -21,6 +21,10 @@ figure {
   padding: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 // MSIE: Required for IEMobile.
 @-ms-viewport {
   width: device-width;

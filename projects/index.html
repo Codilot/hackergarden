@@ -5,7 +5,7 @@ title: Projects
 
 <div class="uk-section uk-padding-remove-top">
   <article class="uk-article uk-padding-xsmall">
-    <h2 class="uk-heading-line"><span>Latest Projects</span></h2>
+    <h2 class="uk-heading-line"><span>{{page.title}}</span></h2>
     {% for post in paginator.posts %}
     <div>
       <h4>
@@ -17,10 +17,9 @@ title: Projects
       <p class="uk-article-meta">
         <span uk-icon="calendar"></span>
         <span class="date">{{post.date | date: "%b %d, %Y "}} </span>
-         •
-        {% include reading-time.html text-to-count=post.content%}
+        • {% include reading-time.html text_to_count=post.content%}
       </p>
-  
+
       <div class="content">
         {{ post.excerpt | strip_html }}
         <br /><a href="{{ post.url | relative_url }}" class="post-read-more"

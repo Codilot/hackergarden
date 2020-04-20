@@ -2,14 +2,20 @@
 layout: page
 title: About
 permalink: /about
+hero_headline: "Our Story"
+hero_body: "With Hackergarden we hackergardeneers want to share our passion for technology, permaculture and growing crops with others. It's an on-gowing learning environment where we can experiment freely with new and existing coding projects. Our goal is to create things that help improve our gardening system and seed saving activities, whether it be working software, improved documentation, or better educational materials. Our intent is also to involve all interestend people with regular meetings. The hackergarden is open to anyone willing to contribute their time."
+hero_link: "#projects"
+hero_button_label: "learn more"
 ---
 
 <ul>
   {% for author in site.authors %}
-    <li>
-      <h2><a href="{{ author.url | relative_url }}">{{ author.short_name }}</a></h2>
-      <h3>{{ author.position }}</h3>
-      <p>{{ author.content | markdownify }}</p>
-    </li>
+  <li>
+    <h2>
+      <a href="{{ author.url | relative_url }}">{{ author.short_name }}</a>
+    </h2>
+    <h3>{{ author.position }}</h3>
+    <p>{{ author.content | markdownify }}</p>
+  </li>
   {% endfor %}
 </ul>

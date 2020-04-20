@@ -1,3 +1,22 @@
+{% if include.hero_headline %} 
+  {% assign hero_headline = include.hero_headline %} 
+{% endif %}
+{% if include.hero_subline %} 
+  {% assign hero_subline = include.hero_subline %} 
+{% endif %}
+{% if include.hero_body %} 
+  {% assign hero_body = include.hero_body %} 
+{% endif %}
+{% if include.hero_link %} 
+  {% assign hero_link = include.hero_link %} 
+{% endif %}
+{% if include.hero_button_label %} 
+  {% assign hero_button_label = include.hero_button_label %} 
+  {% else %}
+  {% assign hero_button_label = "Explore" %} 
+{% endif %}
+
+
 <div
   class="uk-grid-collapse uk-child-width-expand@s hackergarden__hero__container"
   uk-grid
@@ -6,21 +25,29 @@
     <div class="hackergarden__hero__image"></div>
   </div>
   <div
-    class="uk-width-1-1 uk-width-1-2@m hackergarden__hero__content uk-flex uk-flex-middle"
+    class="uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-top hackergarden__hero__content"
   >
     <div class="hackergarden__hero__content__inner uk-animation-fade">
-      <h1 class="hero__headline">Hackergarden</h1>
-      <h2 class="hero__subline">Straubing, BY</h2>
-      <p class="hackergarden__hero__intro hero__intro-text">
-        Hackergarden combines tech 💻 with growing crops 🍅. It’s a place where
-        we explore web and IoT technologies to support our cultivating process
-        🌱 in a sustainable way. In our 400 qm garden we want to preserve as
-        many open-pollinated 🐝 organic vegetable varieties as possible by
-        growing them regularly and share the seeds with others.
-      </p>
-      <button class="uk-button uk-button-default hackergarden__button">
-        Explore
+      {% if hero_headline %} 
+        <h1 class="hero__headline">{{hero_headline}}</h1>
+      {% endif %}
+      {% if hero_subline %} 
+        <h2 class="hero__subline">{{hero_subline}}</h2>
+      {% endif %}
+      {% if hero_body %} 
+        <p class="hackergarden__hero__intro hero__intro-text">
+          {{hero_body}}
+        </p>
+      {% endif %}
+      {% if hero_link %} 
+      <a href="{{ hero_link }}" uk-scroll>
+      <button
+        class="uk-button uk-button-default hackergarden__button uk-margin-large-bottom"
+      >
+        {{hero_button_label}}
       </button>
+        </a>
+        {% endif %}
     </div>
   </div>
 </div>
