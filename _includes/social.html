@@ -1,17 +1,32 @@
 <div uk-grid>
   <p>
-  {% if site.github_username  %}
-    <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="uk-icon-button" uk-icon="github" uk-tooltip="title: GitHub" target="_blank">
+    {% if site.github_username %}
+    <a
+      href="https://github.com/{{ site.github_username| cgi_escape | escape }}"
+      class="uk-icon-button"
+      uk-icon="github"
+      uk-tooltip="title: GitHub"
+      target="_blank"
+    >
     </a>
-  {% endif  %} 
-  {% if site.instagram_username  %}
-    <a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}" class="uk-icon-button" uk-icon="instagram" uk-tooltip="title: Instagram" target="_blank">
+    {% endif %} {% if site.instagram_username %}
+    <a
+      href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"
+      class="uk-icon-button"
+      uk-icon="instagram"
+      uk-tooltip="title: Instagram"
+      target="_blank"
+    >
     </a>
-  {% endif  %} 
-  {% if site.linkedin_username  %}
-    <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" class="uk-icon-button" uk-icon="linkedin" uk-tooltip="title: LinkedIn" target="_blank">
+    {% endif %} {% if site.linkedin_username %}
+    <a
+      href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"
+      class="uk-icon-button"
+      uk-icon="linkedin"
+      uk-tooltip="title: LinkedIn"
+      target="_blank"
+    >
     </a>
-  {% endif  %}
-    <a href="{{ "/feed.xml" | relative_url }}" class="uk-icon-button" uk-icon="rss" uk-tooltip="title: RSS Feed" target="_blank"></a>
+    {% endif %}
   </p>
 </div>
