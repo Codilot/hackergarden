@@ -12,6 +12,7 @@
 // Components
 @import "components/menu";
 @import "components/hero";
+@import "components/hero-image";
 @import "components/pagination";
 @import "components/card";
 @import "components/section";
@@ -24,6 +25,8 @@
 @import "layout/page";
 @import "layout/post";
 @import "layout/author";
+@import "layout/list";
 
 //Pages
 @import "pages/home";
+@import "pages/projects";
