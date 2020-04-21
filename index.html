@@ -7,19 +7,19 @@ hero_body: "Hackergarden combines tech 💻 with growing crops 🍅. It’s a pl
 hero_link: "#projects"
 ---
 
-<div id="projects" class="hackergarden__home uk-grid-match" uk-grid>
+<div id="projects" class="hackergarden__section uk-grid-match" uk-grid>
 
     {% if site.posts.size > 0 %} 
       {% assign posts = site.posts %}
       {% assign newest_post = site.posts.first %}
       <div class="uk-width-1-1">
-        <div class="hackergarden__home__projects uk-card uk-card-default uk-card-large uk-card-body">
-          <h4 class="hackergarden__card__overline">
+        <div class="hackergarden__section__main uk-card uk-card-default uk-card-large uk-card-body">
+          <h4 class="hackergarden__overline">
             <a href="{{ "/projects" | relative_url }}">Projects</a>
           </h4>
    
          
-            <h2 class="uk-card-title hackergarden__card__title">
+            <h2 class="uk-card-title hackergarden__headline-l">
               <a class="post-link" href="{{ newest_post.url | relative_url }}">
                 {{ newest_post.title | escape }}
               </a>
@@ -39,10 +39,10 @@ hero_link: "#projects"
   
     <div class="uk-width-1-2@m">
       <div class="uk-card uk-card-default uk-card-large uk-card-body">       
-          <h4 class="hackergarden__card__overline">
+          <h4 class="hackergarden__overline">
             <a href="{{ "/code" | relative_url }}">Code</a>
           </h4>
-          <h2 class="uk-card-title hackergarden__card__title">
+          <h2 class="uk-card-title hackergarden__headline-m">
             Resources to learn and code along with us
           </h2>
           <div class="uk-grid-match" uk-grid>
@@ -77,10 +77,10 @@ hero_link: "#projects"
   
     <div class="uk-width-1-2@m">
       <div class="uk-card uk-card-default uk-card-large uk-card-body">
-        <h4 class="hackergarden__card__overline">
+        <h4 class="hackergarden__overline">
           <a href="{{ "/veggies" | relative_url }}">Veggies</a>
         </h4>
-        <h2 class="uk-card-title hackergarden__card__title">
+        <h2 class="uk-card-title hackergarden__headline-m">
           Grow, multiply and share vegetable seeds 
         </h2>
         <div class="uk-width-1-1">

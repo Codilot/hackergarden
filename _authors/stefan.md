@@ -1,7 +1,7 @@
 ---
-short_name: stefan
+short_name: Stefan
 name: Stefan Fröhlich
-position: Hackergardeneer
+position: Software Engineer
 ---
 
-Stefan is a senior Software Engineer, helping out with logistics and the technical architecture.
+Stefan is a senior Software Engineer with a passion for electrics and IoT, in charge of logistics, our drainage piping system, data models and the technical architecture.

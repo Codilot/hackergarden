@@ -11,3 +11,35 @@ h5 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.hackergarden {
+  &__overline {
+    font-weight: $font-weight-regular;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 4px solid $global-color-primary;
+    display: inline-block;
+    line-height: 1.2em;
+    margin-bottom: 16px;
+    a {
+      &:hover,
+      &:active {
+        color: $global-color-primary;
+      }
+    }
+  }
+  &__headline {
+    font-weight: $font-weight-regular;
+    &-l {
+      font-size: 2.2em;
+      line-height: 1.2em;
+      margin-bottom: 32px;
+    }
+    &-m {
+      font-size: 1.8em;
+      line-height: 1.2em;
+      margin-bottom: 32px;
+    }
+  }
+}

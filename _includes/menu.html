@@ -9,10 +9,10 @@
 
                     <div class="uk-navbar-left">
                         <a href="{{"/" | relative_url}}" class="uk-navbar-item">
-                            <svg class="hackergarden__logo {% if page.url == "/" %}contrast-color{% endif %}" width="60px" height="60px" viewBox="0 0 36 66" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="hackergarden__logo contrast-color" width="60px" height="60px" viewBox="0 0 36 66" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="none" stroke="#000" stroke-width="2" d="M17 35.5H35M23 41.5H33M21 47.5H30M16 17.5L10 5L15 8L18 2L21 8L26 5L20 17.5M1 33.8C0.999999 24.5216 8.61116 17 18 17C27.3888 17 35 24.5216 35 33.8C35 43.0784 18 65 18 65C18 65 1 43.0784 1 33.8Z"/>
                             </svg>
-                            <span rel="author" class="uk-navbar-item uk-logo hackergarden__brand {% if page.url == "/" %}contrast-color{% endif %}">{{ site.title | escape }}</span>
+                            <span rel="author" class="uk-navbar-item uk-logo hackergarden__brand contrast-color">{{ site.title | escape }}</span>
                         </a>
                     </div>
                   
@@ -30,7 +30,7 @@
 
                     <!-- Navigation Mobile -->
                     <div class="uk-navbar-right uk-hidden@m">
-                        <a href="#offcanvas-slide" class="uk-button hackergarden__menu__button {% if page.url == "/" %}contrast-color{% endif %}" uk-icon="icon: menu" uk-toggle></a>
+                        <a href="#offcanvas-slide" class="uk-button hackergarden__menu__button contrast-color" uk-icon="icon: menu" uk-toggle></a>
 
                         <div id="offcanvas-slide" uk-offcanvas="overlay: true; flip: true">
                             <div class="uk-offcanvas-bar">

@@ -3,19 +3,52 @@ layout: page
 title: About
 permalink: /about
 hero_headline: "Our Story"
-hero_body: "With Hackergarden we hackergardeneers want to share our passion for technology, permaculture and growing crops with others. It's an on-gowing learning environment where we can experiment freely with new and existing coding projects. Our goal is to create things that help improve our gardening system and seed saving activities, whether it be working software, improved documentation, or better educational materials. Our intent is also to involve all interestend people with regular meetings. The hackergarden is open to anyone willing to contribute their time."
-hero_link: "#projects"
+hero_body: "It all started out with a crazy idea about combining our passion for technology, permaculture and growing crops. Hackergarden is an on-going learning environment where we create software that help improve our gardening work and seed saving activities in an allotment garden."
+hero_link: "#about"
 hero_button_label: "learn more"
 ---
 
-<ul>
-  {% for author in site.authors %}
-  <li>
-    <h2>
-      <a href="{{ author.url | relative_url }}">{{ author.short_name }}</a>
-    </h2>
-    <h3>{{ author.position }}</h3>
-    <p>{{ author.content | markdownify }}</p>
-  </li>
-  {% endfor %}
-</ul>
+<div id="about" class="hackergarden__section uk-grid-match" uk-grid>
+  <div class="uk-width-1-1">
+    <div
+      class="hackergarden__section__main uk-card uk-card-default uk-card-large uk-card-body"
+    >
+      <h4 class="hackergarden__overline">
+        People
+      </h4>
+
+      <h2 class="hackergarden__headline-l">
+        The hackergardeneers
+      </h2>
+      <div uk-grid>
+        {% for author in site.authors %}
+        <div class="uk-width-1-2">
+          <h3>
+            <a href="{{ author.url | relative_url }}"
+              >{{ author.short_name }}</a
+            >
+          </h3>
+          <h4>{{ author.position }}</h4>
+          <p>{{ author.content | markdownify }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div uk-grid class="uk-grid-match">
+  <div class="uk-width-1-2 hackergarden__image">image</div>
+  <div class="uk-width-1-2">
+    <article>
+    <header>
+      <h4 class="hackergarden__overline">
+        garden
+      </h4>
+      <h2 class="hackergarden__headline-l">
+        The allotment
+      </h2>
+    </article>
+    </header>
+  </div>
+</div>
