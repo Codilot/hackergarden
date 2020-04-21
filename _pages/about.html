@@ -8,7 +8,7 @@ hero_link: "#about"
 hero_button_label: "learn more"
 ---
 
-<div id="about" class="hackergarden__section uk-grid-match" uk-grid>
+<div id="about" class="uk-grid-match hackergarden__section" uk-grid>
   <div class="uk-width-1-1">
     <div
       class="hackergarden__section__main uk-card uk-card-default uk-card-large uk-card-body"
@@ -17,18 +17,18 @@ hero_button_label: "learn more"
         People
       </h4>
 
-      <h2 class="hackergarden__headline-l">
+      <h2>
         The hackergardeneers
       </h2>
       <div uk-grid>
         {% for author in site.authors %}
         <div class="uk-width-1-2">
-          <h3>
+          <h4>
             <a href="{{ author.url | relative_url }}"
               >{{ author.short_name }}</a
             >
-          </h3>
-          <h4>{{ author.position }}</h4>
+          </h4>
+          <h5>{{ author.position }}</h5>
           <p>{{ author.content | markdownify }}</p>
         </div>
         {% endfor %}
@@ -37,18 +37,27 @@ hero_button_label: "learn more"
   </div>
 </div>
 
-<div uk-grid class="uk-grid-match">
-  <div class="uk-width-1-2 hackergarden__image">image</div>
+
+<div uk-grid class="uk-grid-match uk-margin-xlarge-top uk-margin-xlarge-bottom hackergarden__story">
+  <div class="uk-width-1-2 hackergarden__image hackergarden__image-l"></div>
   <div class="uk-width-1-2">
-    <article>
+    <article class="uk-margin-xlarge-right">
     <header>
       <h4 class="hackergarden__overline">
         garden
       </h4>
-      <h2 class="hackergarden__headline-l">
+      <h2>
         The allotment
       </h2>
+      <p>
+         The allotment garden has about 421 square meter. 
+         When we took over the garden in 2017 it was used as a recreational garden. 
+         Fortunate it had some really nice elderly fruit trees: an apricot tree, a plum tree, three peach trees, two old wine shrubs and some bushes of red and black currant. 
+         The rest was planted with mostly with decorative plants and hybrid flowers. 
+         In the last three years we created for about 150 square meter of vegetable beds and planted five gooseberry bushes, two more wine shrubs, two korean cherry trees (Prunus tomentosa), four hardy kiwi berry bushes, a serviceberry (Amelanchier) and a lot of bee-friendly perennials.
+      </p>
     </article>
     </header>
   </div>
 </div>
+

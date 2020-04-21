@@ -1,19 +1,22 @@
-<footer>
 
+<footer class="hackergarden__footer uk-light">
+  <div class="hackergarden__footer__content">
+    <h4 class="hackergarden__overline">
+      Connect
+    </h4>
+    <div class="hackergarden__footer__social">
+      {% include social.html  %}
+    </div>
 
-  {% include social.html  %}
-
-
-  <!-- Copyright -->
-  <section id="copyright">
-    <p>
+    <p class="hackergarden__footer__imprint">
       &copy; {{ site.title }}
       <a href="https://www.evelinekooijman.com">Eveline Kooijman</a> {% if
       site.email  %} |
       <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> {%
       endif  %}
     </p>
-  </section>
+
+  </div>
 </footer>
 
 <!-- UIkit JS -->

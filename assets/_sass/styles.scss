@@ -4,6 +4,7 @@
 @import "theme/theme_vars";
 
 // Base
+@import "base/animations";
 @import "base/basics";
 @import "base/typography";
 @import "base/elements";
@@ -15,6 +16,8 @@
 @import "components/card";
 @import "components/section";
 @import "components/list";
+@import "components/story";
+@import "components/footer";
 
 // Layout
 @import "layout/default";

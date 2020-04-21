@@ -1,0 +1,18 @@
+@mixin pulse-animation($color, $name) {
+  @keyframes #{$name} {
+    0% {
+      box-shadow: 0 0 0 0 rgba($color, 0.7);
+    }
+
+    70% {
+      box-shadow: 0 0 0 10px rgba($color, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba($color, 0);
+    }
+  }
+}
+
+@include pulse-animation($button-highlight-color-primary, primary-pulse);
+@include pulse-animation($button-highlight-color-secondary, secondary-pulse);

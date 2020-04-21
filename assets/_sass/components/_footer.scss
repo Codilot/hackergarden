@@ -1,0 +1,25 @@
+.hackergarden {
+  &__footer {
+    width: 100%;
+    margin: 50px 0 0;
+    background-color: $global-dark-color;
+    @media screen and (min-width: $breakpoint-sm) {
+      height: 300px;
+    }
+    &__content {
+      padding: 40px 20px 20px;
+      @media screen and (min-width: $breakpoint-sm) {
+        padding-top: 80px;
+        max-width: 80%;
+        margin: auto;
+      }
+    }
+    &__social {
+      margin: 15px auto;
+    }
+    &__imprint {
+      margin-top: 15px;
+      font-size: 0.8em;
+    }
+  }
+}
