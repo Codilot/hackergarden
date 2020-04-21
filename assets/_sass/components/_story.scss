@@ -1,1 +1,15 @@
-
+.hackergarden {
+  &__story {
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-top: 80px !important;
+      margin-bottom: 80px;
+    }
+    &__text {
+      padding: 20px;
+      @media screen and (min-width: $breakpoint-sm) {
+        padding: 0;
+        margin-right: 20%;
+      }
+    }
+  }
+}

@@ -17,12 +17,12 @@ hero_button_label: "learn more"
         People
       </h4>
 
-      <h2>
+      <h3>
         The hackergardeneers
-      </h2>
+      </h3>
       <div uk-grid>
         {% for author in site.authors %}
-        <div class="uk-width-1-2">
+        <div class="uk-width-1-2@m">
           <h4>
             <a href="{{ author.url | relative_url }}"
               >{{ author.short_name }}</a
@@ -37,27 +37,35 @@ hero_button_label: "learn more"
   </div>
 </div>
 
-
-<div uk-grid class="uk-grid-match uk-margin-xlarge-top uk-margin-xlarge-bottom hackergarden__story">
-  <div class="uk-width-1-2 hackergarden__image hackergarden__image-l"></div>
-  <div class="uk-width-1-2">
-    <article class="uk-margin-xlarge-right">
-    <header>
-      <h4 class="hackergarden__overline">
-        garden
-      </h4>
-      <h2>
-        The allotment
-      </h2>
+<div uk-grid class="uk-grid-match hackergarden__story">
+  <div class="uk-width-1-2@m uk-visible@m">
+    <div>
+      <img data-src="{{ "/assets/images/2018_allotment.jpg" | relative_url }}"
+      alt="allotment garden 2018" uk-img>
+    </div>
+  </div>
+  <div class="uk-width-1-2@m">
+    <article class="hackergarden__story__text">
+      <header>
+        <h4 class="hackergarden__overline">
+          garden
+        </h4>
+        <h2>
+          The allotment
+        </h2>
+      </header>
       <p>
-         The allotment garden has about 421 square meter. 
-         When we took over the garden in 2017 it was used as a recreational garden. 
-         Fortunate it had some really nice elderly fruit trees: an apricot tree, a plum tree, three peach trees, two old wine shrubs and some bushes of red and black currant. 
-         The rest was planted with mostly with decorative plants and hybrid flowers. 
-         In the last three years we created for about 150 square meter of vegetable beds and planted five gooseberry bushes, two more wine shrubs, two korean cherry trees (Prunus tomentosa), four hardy kiwi berry bushes, a serviceberry (Amelanchier) and a lot of bee-friendly perennials.
+        The allotment garden has about 421 square meter. When we took over the
+        garden in 2017 it was used as a recreational garden. Fortunate it had
+        some really nice elderly fruit trees: an apricot tree, a plum tree,
+        three peach trees, two old wine shrubs and some bushes of red and black
+        currant. The rest was planted with mostly with decorative plants and
+        hybrid flowers. In the last three years we created for about 150 square
+        meter of vegetable beds and planted five gooseberry bushes, two more
+        wine shrubs, two korean cherry trees (Prunus tomentosa), four hardy kiwi
+        berry bushes, a serviceberry (Amelanchier) and a lot of bee-friendly
+        perennials.
       </p>
     </article>
-    </header>
   </div>
 </div>
-
