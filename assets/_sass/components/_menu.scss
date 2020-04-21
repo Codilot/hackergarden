@@ -19,7 +19,7 @@
   }
 }
 .uk-navbar-nav > li.uk-active > a {
-  color: $global-color-primary;
+  color: $global-color-primary !important;
 }
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
@@ -84,8 +84,20 @@
     }
   }
 }
+
+.dark-mode-desktop {
+  color: white;
+  fill: white;
+  a {
+    color: white !important;
+  }
+  path {
+    stroke: white;
+  }
+}
+
 @media screen and (max-width: $breakpoint-sm) {
-  .contrast-color {
+  .dark-mode-mobile {
     color: white;
     fill: white;
     path {
