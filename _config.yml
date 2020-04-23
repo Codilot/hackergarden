@@ -47,6 +47,11 @@ defaults:
       layout: "author"
   - scope:
       path: ""
+      type: "meetups"
+    values:
+      layout: "meetup"
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"

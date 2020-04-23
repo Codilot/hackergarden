@@ -1,3 +1,3 @@
-window.onload = function() {
-  document.body.className += " loaded";
+window.onload = function () {
+  document.body.className += "loaded";
 };

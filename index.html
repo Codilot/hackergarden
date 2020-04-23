@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: hero-page
 title: Home
 hero_headline: Hackergarden
 hero_subline: "Straubing, BY"
@@ -7,97 +7,103 @@ hero_body: "Hackergarden combines tech 💻 with growing crops 🍅. It’s a pl
 hero_link: "#latest-project"
 ---
 
-<div id="latest-project" class="hackergarden__section uk-grid-match" uk-grid>
+<div id="latest-project" class="hackergarden__section">
 
     {% if site.posts.size > 0 %} 
       {% assign posts = site.posts %}
       {% assign newest_post = site.posts.first %}
-      <div class="uk-width-1-1">
-        <div class="hackergarden__section__main uk-card uk-card-default uk-card-large uk-card-body">
-          <h4 class="hackergarden__overline">
-            <a href="{{ "/projects" | relative_url }}">Projects</a>
-          </h4>
-   
-         
-            <h2 class="uk-card-title hackergarden__headline-l">
-              <a class="post-link" href="{{ newest_post.url | relative_url }}">
-                {{ newest_post.title | escape }}
+      <div uk-grid>
+        <div class="uk-width-1-1@s">
+          <div class="uk-card uk-card-default uk-card-large uk-card-body hackergarden__section__card__hero-page">
+            <h4 class="hackergarden__overline">
+              <a href="{{ "/projects" | relative_url }}">Projects</a>
+            </h4>
+    
+          
+              <h2 class="uk-card-title hackergarden__headline-l">
+                <a class="post-link" href="{{ newest_post.url | relative_url }}">
+                  {{ newest_post.title | escape }}
+                </a>
+              </h2>
+              {% include reading-time.html text_to_count=newest_post.content %}
+              {% if newest_post.excerpt %} 
+                {{ newest_post.excerpt }} 
+              {% endif %}
+              <a class="hackergarden__button__container hackergarden__card__actions" href="{{ newest_post.url | relative_url }}">
+                <button class="uk-button uk-button-default hackergarden__button">
+                    More details
+                </button>
               </a>
-            </h2>
-            {% include reading-time.html text_to_count=newest_post.content %}
-            {% if newest_post.excerpt %} 
-              {{ newest_post.excerpt }} 
-            {% endif %}
-            <a class="hackergarden__button__container hackergarden__card__actions" href="{{ newest_post.url | relative_url }}">
-              <button class="uk-button uk-button-default hackergarden__button">
-                  More details
-              </button>
-             </a>
+          </div>
         </div>
       </div>
     {% endif %}
+
+    <div uk-grid>
+      <div class="uk-width-1-2@m">
+        <div class="uk-card uk-card-default uk-card-large uk-card-body">       
+            <h4 class="hackergarden__overline">
+              <a href="{{ "/code" | relative_url }}">Code</a>
+            </h4>
+            <h3 class="uk-card-title">
+              Resources to learn and code along with us
+            </h3>
+            <div class="uk-grid-match" uk-grid>
+                <div class="uk-width-1-2@m">
+                  <h5 class="hackergarden__list__title">Frontend</h5>
+                  <ul class="uk-list">
+                    {% for link in site.data.code.frontend limit:5 %} 
+                      <li>
+                          <a href="{{ link.url }}">{{ link.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div class="uk-width-1-2@m">
+                <h5 class="hackergarden__list__title">JavaScript</h5>
+                  <ul class="uk-list">
+                    {% for link in site.data.code.javascript.courses limit:5 %} 
+                      <li>
+                          <a href="{{ link.url }}">{{ link.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+            </div>
+            <a class="hackergarden__button__container hackergarden__card__actions" href="{{ "/code" | relative_url }}">
+              <button class="uk-button uk-button-default hackergarden__button">
+                  Show more
+              </button>
+            </a>
+          </div>
+      </div>
   
-    <div class="uk-width-1-2@m">
-      <div class="uk-card uk-card-default uk-card-large uk-card-body">       
+      <div class="uk-width-1-2@m">
+        <div class="uk-card uk-card-default uk-card-large uk-card-body">
           <h4 class="hackergarden__overline">
-            <a href="{{ "/code" | relative_url }}">Code</a>
+            <a href="{{ "/veggies" | relative_url }}">Veggies</a>
           </h4>
           <h3 class="uk-card-title">
-            Resources to learn and code along with us
+            Grow, multiply and share vegetable seeds 
           </h3>
-          <div class="uk-grid-match" uk-grid>
-              <div class="uk-width-1-2@m">
-                <h5 class="hackergarden__list__title">Frontend</h5>
-                <ul class="uk-list">
-                  {% for link in site.data.code.frontend limit:5 %} 
-                    <li>
-                        <a href="{{ link.url }}">{{ link.title }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-              <div class="uk-width-1-2@m">
-              <h5 class="hackergarden__list__title">JavaScript</h5>
-                <ul class="uk-list">
-                  {% for link in site.data.code.javascript.courses limit:5 %} 
-                    <li>
-                        <a href="{{ link.url }}">{{ link.title }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
+          <div class="uk-width-1-1">
+              <h5 class="hackergarden__list__title">Resources</h5>
+              <ul class="uk-list">
+                {% for link in site.data.veggies.seeds.resources limit:5 %} 
+                  <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
           </div>
-          <a class="hackergarden__button__container hackergarden__card__actions" href="{{ "/code" | relative_url }}">
+          <a class="hackergarden__button__container hackergarden__card__actions" href="{{ "/veggies" | relative_url }}">
             <button class="uk-button uk-button-default hackergarden__button">
                 Show more
             </button>
           </a>
         </div>
-    </div>
-  
-    <div class="uk-width-1-2@m">
-      <div class="uk-card uk-card-default uk-card-large uk-card-body">
-        <h4 class="hackergarden__overline">
-          <a href="{{ "/veggies" | relative_url }}">Veggies</a>
-        </h4>
-        <h3 class="uk-card-title">
-          Grow, multiply and share vegetable seeds 
-        </h3>
-        <div class="uk-width-1-1">
-            <h5 class="hackergarden__list__title">Resources</h5>
-            <ul class="uk-list">
-              {% for link in site.data.veggies.seeds.resources limit:5 %} 
-                <li>
-                  <a href="{{ link.url }}">{{ link.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-        </div>
-        <a class="hackergarden__button__container hackergarden__card__actions" href="{{ "/veggies" | relative_url }}">
-          <button class="uk-button uk-button-default hackergarden__button">
-              Show more
-          </button>
-         </a>
       </div>
+
     </div>
-  </div>
+
+</div>

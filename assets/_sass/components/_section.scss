@@ -4,16 +4,21 @@
     max-width: 80%;
   }
   @media screen and (max-width: $breakpoint-sm) {
-    & > div {
-      padding: 0;
-      margin: 0px 20px 20px !important;
-    }
+    padding: 20px;
+    margin-top: 20px;
   }
-
-  &__main {
-    min-height: 300px;
-    @media screen and (min-width: $breakpoint-sm) {
-      margin-top: -150px;
+  &__card {
+    &__hero-page {
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-top: -150px;
+      }
+    }
+    &__list-page {
+      min-height: 700px;
+      margin-top: 60px;
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-top: 180px;
+      }
     }
   }
 }

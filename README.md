@@ -13,9 +13,24 @@ bundle exec jekyll serve
     site {
         authors : [
             {
-                short_name: string
-                position: string
-                content: markdown
+                short_name: string,
+                position: string,
+                content: markdown,
+                title: string,
+                date: string,
+                url: string
+            }]
+        meetups : [
+            {
+                title: string,
+                date: string,
+                url: string
+            }]
+         posts : [
+            {
+                title: string,
+                date: string,
+                url: string
             }]
         }
 }

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% include hero-image.html %}
+
+<div
+  id="{{ page.id | downcase }}"
+  class="hackergarden__section hackergarden__list-page"
+>
+  <div uk-grid>
+    <div class="uk-width-1-1">
+      <div
+        class="uk-card uk-card-default uk-card-large uk-card-body hackergarden__section__card hackergarden__section__card__list-page"
+      >
+        <h4 class="hackergarden__overline">{{ page.overline }}</h4>
+
+        <h2>{{ page.title }}</h2>
+
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>

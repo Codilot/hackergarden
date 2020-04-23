@@ -1,44 +1,33 @@
 ---
-layout: list
-title: Projects
+layout: list-page
+title: Latest projects
+overline: projects
+id: projects
 ---
 
-<div id="projects" class="hackergarden__section hackergarden_projects" uk-grid>
-  <div class="uk-width-1-1">
-    <div
-      class="hackergarden__section__main uk-card uk-card-default uk-card-large uk-card-body"
+{% for post in paginator.posts %}
+<article class="uk-article uk-padding-medium uk-margin-medium">
+  <h3>
+    <a class="uk-link-reset" href="{{ post.url | relative_url }}"
+      >{{ post.title }}</a
     >
-      <h4 class="hackergarden__overline">Projects</h4>
+  </h3>
 
-      <h2>Latest Projects</h2>
-      
-    {% for post in paginator.posts %}
-    <article class="uk-article uk-padding-medium uk-margin-medium">
-      <h3>
-        <a class="uk-link-reset" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h3>
+  <p class="uk-article-meta">
+    <span uk-icon="calendar"></span>
+    <span class="date">{{post.date | date: "%b %d, %Y "}} </span>
+    • {% include reading-time.html text_to_count=post.content%}
+  </p>
 
-      <p class="uk-article-meta">
-        <span uk-icon="calendar"></span>
-        <span class="date">{{post.date | date: "%b %d, %Y "}} </span>
-        • {% include reading-time.html text_to_count=post.content%}
-      </p>
-
-      <p>
-        {{ post.excerpt | strip_html }}
-      </p>
-      <div>
-        <a class="uk-button uk-button-text" href="{{ post.url | relative_url }}"
-          >[Read more]</a
-        >
-      </div>
-    </article>
-    {% unless forloop.last %}
-    <hr />
-    {% endunless %} {% endfor %} {% include projects-pagination.html %}
-
-
-    </div>
+  <p>
+    {{ post.excerpt | strip_html }}
+  </p>
+  <div>
+    <a class="uk-button uk-button-text" href="{{ post.url | relative_url }}"
+      >[Read more]</a
+    >
   </div>
-</div>
-
+</article>
+{% unless forloop.last %}
+<hr />
+{% endunless %} {% endfor %} {% include projects-pagination.html %}

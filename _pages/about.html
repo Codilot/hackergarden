@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: hero-page
 title: About
 permalink: /about
 hero_headline: "Our Story"
@@ -8,36 +8,37 @@ hero_link: "#about"
 hero_button_label: "learn more"
 ---
 
-<div id="about" class="hackergarden__section" uk-grid>
-  <div class="uk-width-1-1">
-    <div
-      class="hackergarden__section__main uk-card uk-card-default uk-card-large uk-card-body"
-    >
-      <h4 class="hackergarden__overline">
-        People
-      </h4>
+<div id="about" class="hackergarden__section">
+  <div uk-grid>
+    <div class="uk-width-1-1">
+      <div
+        class="uk-card uk-card-default uk-card-large uk-card-body hackergarden__section__card hackergarden__section__card__hero-page"
+      >
+        <h4 class="hackergarden__overline">
+          People
+        </h4>
 
-      <h3>
-        The hackergardeneers
-      </h3>
-      <div uk-grid>
-        {% for author in site.authors %}
-        <div class="uk-width-1-2@m">
-          <h4>
-            <a href="{{ author.url | relative_url }}"
-              >{{ author.short_name }}</a
-            >
-          </h4>
-          <h5>{{ author.position }}</h5>
-          <p>{{ author.content | markdownify }}</p>
+        <h3>
+          The hackergardeneers
+        </h3>
+        <div uk-grid>
+          {% for author in site.authors %}
+          <div class="uk-width-1-2@m">
+            <h4>
+              <a href="{{ author.url | relative_url }}"
+                >{{ author.short_name }}</a
+              >
+            </h4>
+            <h5>{{ author.position }}</h5>
+            <p>{{ author.content | markdownify }}</p>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>
 </div>
-
-<div uk-grid class="uk-grid-match hackergarden__story">
+<div class="uk-grid-match hackergarden__story" uk-grid>
   <div class="uk-width-1-2@m uk-visible@m">
     <div>
       <img data-src="{{ "/assets/images/2018_allotment.jpg" | relative_url }}"
