@@ -19,7 +19,7 @@
   }
 }
 .uk-navbar-nav > li.uk-active > a {
-  color: $global-color-primary !important;
+  box-shadow: inset 0 4px 0 0 $global-color-primary;
 }
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
@@ -34,8 +34,12 @@
     li > a {
       color: white;
       font-family: $global-font;
+
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+    li.uk-active > a {
+      box-shadow: inset 0 4px 0 0 white;
     }
   }
 }
@@ -45,17 +49,25 @@
   width: 100%;
   background-color: $global-color-primary;
   .uk-nav-default > li > a {
+    font-size: 1.4em;
+    padding: 0.2em 1.4em;
+    margin-bottom: 0.8em;
     color: rgba(255, 255, 255, 1);
+  }
+  li.uk-active > a {
+    box-shadow: inset 4px 0 0 white;
   }
   .uk-offcanvas-close {
     padding: 12px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
   }
 }
 
 .hackergarden {
   &__logo {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     path {
       stroke: $global-text-color;
       stroke-dasharray: 126;
