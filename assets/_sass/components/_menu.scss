@@ -17,10 +17,13 @@
     color: $global-text-color;
     font-family: $global-font;
     font-size: 0.9em;
+    &:hover {
+      box-shadow: inset 0 8px 0 0 $global-color-primary;
+    }
   }
 }
 .uk-navbar-nav > li.uk-active > a {
-  box-shadow: inset 0 4px 0 0 $global-color-primary;
+  box-shadow: inset 0 8px 0 0 $global-dark-color;
 }
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
@@ -35,12 +38,14 @@
     li > a {
       color: white;
       font-family: $global-font;
-
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      &:hover {
+        box-shadow: inset 0 8px 0 0 $global-color-primary-light;
+      }
     }
     li.uk-active > a {
-      box-shadow: inset 0 4px 0 0 white;
+      box-shadow: inset 0 8px 0 0 white;
     }
   }
 }
