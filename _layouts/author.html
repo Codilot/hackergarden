@@ -1,18 +1,29 @@
 ---
-layout: default
+layout: list-page
 ---
 
-<div class="hackergarden__author">
-  <h1>{{ page.short_name }}</h1>
-  <h2>{{ page.position }}</h2>
+{% assign filtered_posts = site.posts | where: 'author', page.short_name %}
 
-  {{ content }}
+  <h4>{{ page.position }}</h4>
 
-  <h2>Posts</h2>
-  <ul>
-    {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-    {% for post in filtered_posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+  {{ content }} 
+
+  <div class="uk-margin-medium">
+    {% if filtered_posts.size > 0 %}
+    <h5 class="hackergarden__list__title ">{{page.short_name}} contributed to following projects:</h5>
+    <ul class="uk-list">
+      {% for post in filtered_posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+
+  <div class="hackergarden__pagination">
+    <hr class="hackergarden__pagination__divider">
+    <ul class="uk-pagination" uk-margin>
+      <li>
+        <a href="{{"/about" | relative_url}}"><span class="uk-margin-small-right"  uk-pagination-previous></span>Back</a>
+      </li>
+    </ul>
+  </div>

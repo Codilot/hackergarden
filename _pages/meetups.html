@@ -6,7 +6,9 @@ overline: Meetups
 permalink: /meetups
 ---
 
-{% for meetup in site.meetups %}
+{% assign meetups = site.meetups %} 
+{% if meetups.size > 0 %} 
+{% for meetup in meetups %}
 <article class="uk-article uk-padding-medium uk-margin-medium">
   <h3>
     <a class="uk-link-reset" href="{{ meetup.url | relative_url }}"
@@ -31,4 +33,10 @@ permalink: /meetups
 </article>
 <hr />
 
-{% endfor %}
+{% endfor %} 
+
+{% else %} 
+  <div>
+    <p>No Meetups schduled just yet</p>
+  </div>
+{% endif %}

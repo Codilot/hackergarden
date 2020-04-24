@@ -1,6 +1,6 @@
 ---
 layout: post
-author: eve
+author: Eve
 ---
 
 Rocket or arugula (American English) (Eruca vesicaria; syns. Eruca sativa Mill., E. vesicaria subsp. sativa (Miller) Thell., Brassica eruca L.) is an edible annual plant in the family Brassicaceae used as a leaf vegetable for its fresh, tart, bitter, and peppery flavor.

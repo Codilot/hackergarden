@@ -1,14 +1,10 @@
 ---
-layout: default
+layout: list-page
 ---
 
-<article class="hackergarden__meetup">
-  <header class="meetup-header">
-    <h1 class="meetup-title" itemprop="name headline">
-      {{ page.title | escape }}
-    </h1>
-
-    <p class="meetup-meta">
+<article class="hackergarden__meetup uk-margin-medium">
+  <header>
+    <p>
       <time
         datetime="{{ page.date | date_to_xmlschema }}"
         itemprop="datePublished"
@@ -26,7 +22,16 @@ layout: default
     </p>
   </header>
 
-  <div class="meetup-content" itemprop="articleBody">
+  <div itemprop="articleBody">
     {{ content }}
   </div>
 </article>
+
+<div class="hackergarden__pagination">
+  <hr class="hackergarden__pagination__divider">
+  <ul class="uk-pagination" uk-margin>
+    <li>
+      <a href="{{"/meetups" | relative_url}}"><span class="uk-margin-small-right"  uk-pagination-previous></span>Back</a>
+    </li>
+  </ul>
+</div>

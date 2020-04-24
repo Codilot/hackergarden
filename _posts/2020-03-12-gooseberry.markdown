@@ -1,6 +1,6 @@
 ---
 layout: post
-author: eve
+author: Eve
 ---
 
 The gooseberry (/ˈɡuːsbɛri/ or /ˈɡuːzbɛri/ (American and northern British) or /ˈɡʊzbəri/ (southern British)), with scientific names Ribes uva-crispa (and syn. Ribes grossularia), is a species of Ribes (which also includes the currants).
