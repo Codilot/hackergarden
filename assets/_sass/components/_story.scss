@@ -1,15 +1,32 @@
 .hackergarden {
   &__story {
-    @media screen and (min-width: $breakpoint-sm) {
-      margin-top: 80px !important;
-      margin-bottom: 80px;
+    width: 80%;
+    margin: 80px auto;
+    @media screen and (min-width: $breakpoint-m) {
+      width: 100%;
     }
     &__text {
-      padding: 20px;
-      @media screen and (min-width: $breakpoint-sm) {
-        padding: 0;
-        margin-right: 20%;
+      margin-bottom: 20px;
+      @media screen and (min-width: $breakpoint-m) {
+        padding: 0 20px;
       }
+    }
+    &__main-img {
+      overflow: hidden;
+      img {
+        height: 500px;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+    &__thumb-img {
+      overflow: hidden;
+      img {
+        height: 220px;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+      margin: 10px;
     }
   }
 }
