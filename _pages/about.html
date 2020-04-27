@@ -8,7 +8,7 @@ hero_link: "#about"
 hero_button_label: "learn more"
 ---
 
-<div id="about" class="hackergarden__section">
+<div id="about" class="hackergarden__section hackergarden__about">
   <div uk-grid>
     <div class="uk-width-1-1">
       <div
@@ -24,14 +24,14 @@ hero_button_label: "learn more"
         <div uk-grid>
           {% for author in site.authors %}
           <div class="uk-width-1-2@m">
-            <div class="uk-flex">
-              <div>
+            <div class="uk-flex uk-flex-wrap">
+              <div class="hackergarden__author__avatar uk-width-auto@m">
                 <span
-                  class="hackergarden__author__image uk-flex uk-flex-center uk-flex-middle"
+                  class="uk-flex uk-flex-center uk-flex-middle"
                   uk-icon="icon: user; ratio: 2"
                 ></span>
               </div>
-              <div class="uk-margin-medium-left">
+              <div class="uk-width-expand@m">
                 <h4>
                   <a href="{{ author.url | relative_url }}"
                     >{{ author.short_name }}</a

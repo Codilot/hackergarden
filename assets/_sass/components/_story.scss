@@ -14,7 +14,10 @@
     &__main-img {
       overflow: hidden;
       img {
-        height: 500px;
+        height: 200px;
+        @media screen and (min-width: $breakpoint-m) {
+          height: 500px;
+        }
         object-fit: cover;
         object-position: 50% 50%;
       }
@@ -22,7 +25,10 @@
     &__thumb-img {
       overflow: hidden;
       img {
-        height: 220px;
+        height: 80px;
+        @media screen and (min-width: $breakpoint-m) {
+          height: 220px;
+        }
         object-fit: cover;
         object-position: 50% 50%;
       }

@@ -1,10 +1,14 @@
 .hackergarden__author {
-  &__image {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid #666;
+  &__avatar {
+    padding: 0 20px 20px 0;
 
-    text-align: center;
+    span {
+      margin: 0 auto;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid #666;
+      text-align: center;
+    }
   }
 }
