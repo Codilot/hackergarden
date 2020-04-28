@@ -4,7 +4,7 @@
     margin: 50px 0 0;
     background-color: $global-dark-color;
     @media screen and (min-width: $breakpoint-sm) {
-      height: 30%;
+      min-height: 30%;
     }
     &__content {
       padding: 40px 20px 20px;
