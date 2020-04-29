@@ -23,15 +23,15 @@ include.hero_button_label %} {% else %} {% assign hero_button_label = "Explore"
       <p class="hackergarden__hero__intro hero__intro-text">
         {{hero_body}}
       </p>
-      {% endif %} {% if hero_link %}
-      <a href="{{ hero_link }}" uk-scroll>
+      {% endif %}
+      <a href="#scroll" uk-scroll>
         <button
           class="uk-button uk-button-default hackergarden__button uk-margin-large-bottom"
         >
           {{hero_button_label}}
         </button>
       </a>
-      {% endif %}
     </div>
   </div>
 </div>
+<div id="scroll"></div>
