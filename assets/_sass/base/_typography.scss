@@ -29,6 +29,15 @@ h3 {
   margin-bottom: 32px;
 }
 
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $global-color-primary;
+    text-decoration: none;
+  }
+}
+
 .hackergarden {
   &__overline {
     font-weight: $font-weight-regular;
@@ -39,11 +48,5 @@ h3 {
     display: inline-block;
     line-height: 1.2em;
     margin-bottom: 16px;
-    a {
-      &:hover,
-      &:active {
-        color: $global-color-primary;
-      }
-    }
   }
 }
