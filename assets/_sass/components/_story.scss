@@ -14,7 +14,10 @@
     &__main-img {
       overflow: hidden;
       img {
-        height: 200px;
+        height: 300px;
+        @media screen and (min-width: $breakpoint-s) {
+          height: 400px;
+        }
         @media screen and (min-width: $breakpoint-m) {
           height: 500px;
         }
@@ -24,15 +27,24 @@
     }
     &__thumb-img {
       overflow: hidden;
+      width: 60%;
+      margin: 10px 20%;
+      @media screen and (min-width: $breakpoint-s) {
+        width: 50%;
+        margin: 10px 25%;
+      }
+      @media screen and (min-width: $breakpoint-sm) {
+        margin: 20px;
+        width: 25%;
+      }
       img {
-        height: 80px;
-        @media screen and (min-width: $breakpoint-m) {
-          height: 220px;
-        }
         object-fit: cover;
         object-position: 50% 50%;
+        width: 100%;
+        @media screen and (min-width: $breakpoint-m) {
+          height: 250px;
+        }
       }
-      margin: 10px;
     }
   }
 }
