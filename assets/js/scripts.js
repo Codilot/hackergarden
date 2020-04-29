@@ -9,6 +9,9 @@ function createImages(postId, node) {
     })
     .then((url) => {
       let image = new Image();
+      image.onload = function () {
+        image.src = this.src;
+      };
       image.src = url;
       node.appendChild(image);
     });
