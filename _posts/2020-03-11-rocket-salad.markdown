@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: list-page
 author: Eve
 ---
 
