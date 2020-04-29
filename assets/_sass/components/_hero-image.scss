@@ -5,7 +5,6 @@
   top: 0;
   right: 0;
   z-index: -1;
-  transform: translate3d(0, 0, 0) scale(1.1);
   background: url("images/hero.jpg") no-repeat center center;
   background-size: cover;
   &:before {
@@ -17,10 +16,6 @@
     left: 0;
     background-color: #000000;
     opacity: 0.2;
-  }
-  .loaded & {
-    transform: scale(1);
-    transition: 20s transform;
   }
   &__container {
     height: 100%;
