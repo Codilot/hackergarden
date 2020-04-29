@@ -18,9 +18,11 @@ function createImages(postId, node) {
 }
 
 const $element = document.querySelector(".hackergarden__instagram");
-let instaNodes = $element.querySelectorAll("div[data-id]");
-if (instaNodes) {
-  instaNodes.forEach((instaNode) => {
-    createImages(instaNode.dataset.id, instaNode);
-  });
+if ($element) {
+  let instaNodes = $element.querySelectorAll("div[data-id]");
+  if (instaNodes) {
+    instaNodes.forEach((instaNode) => {
+      createImages(instaNode.dataset.id, instaNode);
+    });
+  }
 }
