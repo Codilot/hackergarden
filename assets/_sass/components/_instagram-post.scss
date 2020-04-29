@@ -1,0 +1,15 @@
+.hackergarden__instagram-post {
+  min-height: 300px;
+  @media screen and (min-width: $breakpoint-l) {
+    min-height: 320px;
+  }
+  @media screen and (min-width: $breakpoint-xl) {
+    min-height: 400px;
+  }
+  img {
+    width: 100%;
+    animation-duration: 0.4s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in;
+  }
+}

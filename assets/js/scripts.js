@@ -8,10 +8,11 @@ function createImages(postId, node) {
       return response.url;
     })
     .then((url) => {
+      let placeholder = node.querySelector(
+        ".hackergarden__loading__placeholder"
+      );
+      node.removeChild(placeholder);
       let image = new Image();
-      image.onload = function () {
-        image.src = this.src;
-      };
       image.src = url;
       node.appendChild(image);
     });

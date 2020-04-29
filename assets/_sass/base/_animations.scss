@@ -16,3 +16,21 @@
 
 @include pulse-animation($button-highlight-color-primary, primary-pulse);
 @include pulse-animation($button-highlight-color-secondary, secondary-pulse);
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

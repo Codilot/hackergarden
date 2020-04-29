@@ -5,6 +5,7 @@
   top: 0;
   right: 0;
   z-index: -1;
+
   background: url("images/hero.jpg") no-repeat center center;
   background-size: cover;
   &:before {
@@ -17,6 +18,7 @@
     background-color: #000000;
     opacity: 0.2;
   }
+
   &__container {
     height: 100%;
     @media screen and (min-width: $breakpoint-sm) {
