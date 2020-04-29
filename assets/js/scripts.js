@@ -1,10 +1,7 @@
-window.onload = function () {
-  document.body.className += "loaded";
-};
-
-function createImages(postId, node) {
+function createImagesFromInstagram(postId, node) {
   fetch(`https://instagram.com/p/${postId}/media/?size=m`)
     .then((response) => {
+      console.log(response);
       return response.url;
     })
     .then((url) => {
@@ -23,7 +20,7 @@ if ($element) {
   let instaNodes = $element.querySelectorAll("div[data-id]");
   if (instaNodes) {
     instaNodes.forEach((instaNode) => {
-      createImages(instaNode.dataset.id, instaNode);
+      createImagesFromInstagram(instaNode.dataset.id, instaNode);
     });
   }
 }
