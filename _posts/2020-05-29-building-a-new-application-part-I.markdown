@@ -5,7 +5,7 @@ overline: Building a new application
 title: Part I - Kill Frankenstein and frame it
 ---
 
-Building a new application is exiting. You have an awesome idea and some great thoughts about what frameworks could fit, what cool new tech stuff you can implement and what programming language would be most performant to do so. So you start reading into the latest technologies, find some totally performant solutions and some really great features that help you build faster and better.
+Building a new application is exciting. You have an awesome idea and some great thoughts about what frameworks could fit, what cool new tech stuff you can implement and what programming language would be most performant to do so. So you start reading into the latest technologies, find some totally performant solutions and some really great features that help you build faster and better.
 
 <!--more-->
 
