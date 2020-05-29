@@ -44,3 +44,7 @@ bundle exec jekyll serve
 - Meetups
 - Code
 - Veggies
+
+## Visit the site in production:
+
+https://codilot.github.io/hackergarden/

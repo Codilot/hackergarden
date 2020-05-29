@@ -1,7 +1,6 @@
 function createImagesFromInstagram(postId, node) {
   fetch(`https://instagram.com/p/${postId}/media/?size=m`)
     .then((response) => {
-      console.log(response);
       return response.url;
     })
     .then((url) => {
