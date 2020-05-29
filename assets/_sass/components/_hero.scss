@@ -93,6 +93,10 @@
   &__intro-text {
     font-weight: $font-weight-thin;
     letter-spacing: 0.04em;
+    color: white;
+    @media screen and (min-width: $breakpoint-m) {
+      color: $global-text-color;
+    }
   }
 }
 
