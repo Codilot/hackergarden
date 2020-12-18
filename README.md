@@ -47,4 +47,4 @@ bundle exec jekyll serve
 
 ## Visit the site in production:
 
-https://codilot.github.io/hackergarden/
+https://codilot.github.io
