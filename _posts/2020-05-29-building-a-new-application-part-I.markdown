@@ -23,7 +23,7 @@ It may sound cumbersome but building a product or application is not so differen
 
 More often than not, the precise moment I speak out the words "user journey map"[^first] in a room with fellow developers, the concentration level drops to a point of **[“Not my piece of the pie”](https://stackoverflow.com/questions/514083/why-is-good-ui-design-so-hard-for-some-developers)** . But trust me, dear fellow developers, it is totally worth your time. It will help you putting the screws in the right place and the shelves in the right order. In my experience that saves a lot of discussion time and rework later on as well. And no worries, you don't need to sketch any happy paintings, if you don't want to, I promise. Just some sticky notes will do.
 
-[^first]: **Definition of a journey map**: _A journey map is a visualization of the process that a person goes through in order to accomplish a goal. **Source**: [Nielsen Norman Group](https://www.nngroup.com/articles/journey-mapping-101/)
+[^first]: **Definition of a journey map**: _A journey map is a visualization of the process that a person goes through in order to accomplish a goal._ **Source**: [Nielsen Norman Group](https://www.nngroup.com/articles/journey-mapping-101/)
 
 #### Frame it
 
